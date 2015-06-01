@@ -397,3 +397,12 @@ body {
 .stats-section .nav-tabs>li>a{
     background-color: #000000;
 }
+
+.content-contact-section {
+    padding-top: 50px;
+    height: 80vh;
+}
+
+.johnnyfu-contact-color  {
+        color : rgba(255,204,51,0.8);
+}

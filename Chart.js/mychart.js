@@ -107,7 +107,7 @@ var pieOptions = {
 
 // Radar chart
 var radarData = {
-    labels: ["MINUTES", "POINTS", "FIELD GOALS", "3-PT FIELD GOALS", "FREE THROWS", "REBOUNDS", "ASSISTS","STEALS","BLOCKS","TURNOVERS"],
+    labels: ["POINTS", "FIELD GOALS", "3-PT FIELD GOALS", "FREE THROWS", "REBOUNDS", "ASSISTS","STEALS","BLOCKS","TURNOVERS"],
     datasets: [{
         label: "My First dataset",
         fillColor: "rgba(255,204,51,0.8)",
@@ -116,7 +116,7 @@ var radarData = {
         pointStrokeColor: "#fff",
         pointHighlightFill: "#fff",
         pointHighlightStroke: "rgba(220,220,220,1)",
-        data: [65, 59, 90, 81, 56, 55, 40, 81, 56, 55]
+        data: [23.8, 8.2, 3.6, 3.9, 4.3, 7.7, 2, 0.2,3.1]
     }, {
         // label: "My Second dataset",
         // fillColor: "rgba(151,187,205,0.2)",
@@ -130,18 +130,20 @@ var radarData = {
 };
 
 var  radarOptions  = {
-        // angleLineColor : "rgba(255,255,255,1)",
-
-        // datasetStroke : true,
-
+        scaleShowLabels : true,
         scaleShowLine : true,
-        scaleGridLineColor: "rgba(255,255,255,0.6)",
-        scaleFontSize: 10,
+        scaleFontSize: 15,
         scaleFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
-        scaleFontColor: "rgb(255,204,51)",
-        pointLabelFontFamily : "'Arial'",
-        scaleLineColor: "rgba(4,82,156,0.8)",
-        scaleShowLabels : true
+        scaleFontColor: "rgb(153,255,0)",
+        pointLabelFontFamily : "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+        scaleLineColor: "rgb(51, 153, 255)",
+        pointLabelFontColor : "rgb(255,255,255)",
+        pointLabelFontSize : 14,
+        pointDot : true,
+        pointDotRadius : 5,
+        scaleLineWidth: 3
+
+
 };
 
 
@@ -179,8 +181,8 @@ $(document).ready(function() {
         if ($targetChart.size() > 0 && !$target.data('initialized') && targetHref === '#secondTab') {
             var fgChart = $targetChart.get(0).getContext("2d");
             new Chart(fgChart).Pie(fgPieData, pieOptions);
-            var threePointChart = $targetChart.get(0).getContext("2d");
-            // new Chart(threePointChart).Pie(threePointData, pieOptions);
+            var threePointChart = $("#threePoint-area").get(0).getContext("2d");
+            new Chart(threePointChart).Pie(threePointData, pieOptions);
             $target.data({
                 initialized: true
             });
