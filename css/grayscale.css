@@ -265,7 +265,7 @@ a:focus {
 
 .stats-section {
     width: 100%;
-    padding: 50px 0;
+    padding-top: 12px;
     color: #fff;
     background: url(../img/streetbasketball.jpg) no-repeat center center scroll;
     background-color: #000;
@@ -288,9 +288,9 @@ a:focus {
 
     }
 
-    .stats-section {
+/*    .stats-section {
         padding: 100px 0;
-    }
+    }*/
 
     #map {
         height: 400px;
@@ -399,7 +399,7 @@ body {
 }
 
 .content-contact-section {
-    padding-top: 50px;
+    padding-top: 200px;
     height: 80vh;
 }
 
